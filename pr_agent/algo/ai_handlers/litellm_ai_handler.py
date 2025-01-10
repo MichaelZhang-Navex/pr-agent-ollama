@@ -26,6 +26,7 @@ class LiteLLMAIHandler(BaseAiHandler):
         Initializes the OpenAI API key and other settings from a configuration file.
         Raises a ValueError if the OpenAI key is missing.
         """
+        litellm.set_verbose = True
         self.azure = False
         self.api_base = None
         self.repetition_penalty = None
